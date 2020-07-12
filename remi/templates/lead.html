@@ -1,28 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>My Webpage!</title>
-        <style>
-            h1 {
-                color:aquamarine;
-                text-align: center;
-            }
-            p {
-                color:aqua;
-                text-align: justify;
-            }
-        </style>
-    </head>
-    <body>
-        <h1>
-            The Beginning
-        </h1>
+{% "extends layout.html" %}
+
+{% block heading %}
+    Welcome!
+{% endblock %}
+
+{% block body %}
         <p>
-            Hello, world! Hello again. This is a test of pull and push..Do not take what's not yours.
+            Olly's Cuisine will give you nothing more than the </br>
+            best. You'll come back for more.
         </p>
-        <p>
-            It took a really long time for me to come to reconcile within myself that I want to continue with my CS50's <br> 
-            front and back end programming.
-        </p>
-    </body>
-</html>
+        
+        <a href="{{ url_for ('more') }}">See more...</a>
+{% end block %}
