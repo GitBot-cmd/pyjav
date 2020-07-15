@@ -1,4 +1,4 @@
-{% "extends layout.html" %}
+{% extends "layout.html" %}
 
 {% block heading %}
     Welcome!
@@ -9,6 +9,14 @@
             Olly's Cuisine will give you nothing more than the </br>
             best. You'll come back for more.
         </p>
+        <ul>
+            {% for i in notes %}
+                <li>{{ i }}</li>
+            {% endfor %}
+        </ul>
+        <form action="{{ url_for('lead') }}" method="post"><input type="text" name="note" placeholder="Enter Note Here">
+            <button>Add Note</button>
+        </form>
         
         <a href="{{ url_for ('more') }}">See more...</a>
-{% end block %}
+{% endblock %}

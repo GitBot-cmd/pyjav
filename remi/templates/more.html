@@ -1,4 +1,4 @@
-{% "extends layout.html" %}
+{% extends "layout.html" %}
 
 {% block heading %}
     Ready To Eat!
@@ -7,11 +7,12 @@
 {% block body %}
     <h4>List of Food</h4>
     <ul>
-    {% for i in foodlists %}:    
-        <li>{{ i }}</li>
+        {% for i in foodlists %}    
+            <li>{{ i }}</li>
+        {% endfor %}
     </ul>
     <p>
         Happy customer, Happy Olly!
     </p>
-    <a href="{{ url_for ('lead') }}">Go back...</a>
-{% end block %}
+    <a href="{{ url_for ('lead') }}">See more...</a>
+{% endblock %}
